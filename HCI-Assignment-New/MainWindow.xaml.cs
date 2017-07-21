@@ -13,7 +13,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using HCI_Assignment_New.Global;
+using HCI_Assignment_New.Control;
 using HCI_Assignment_New.Pages;
 using MaterialDesignThemes.Wpf;
 using Time_Table_Arranging_Program.Interfaces;
@@ -28,12 +28,14 @@ namespace HCI_Assignment_New {
         public MainWindow() {
             InitializeComponent();
             Frame = this.MainFrame;
-            DialogBox.Initialize(DialogHost, DialogTitle, DialogMessage, DialogButton);
+            DialogBox.Initialize(this.DialogHost);            
             MainFrame.Navigate(new Page_Login());
+     
         }
 
         private void ExtraMenuButton_OnClick(object sender, RoutedEventArgs e) {
             DrawerHost.IsRightDrawerOpen = true;
+            DialogBox.Show("Title" , "message" , "lol");
         }
 
         private void MainFrame_OnNavigating(object sender, NavigatingCancelEventArgs e) {
