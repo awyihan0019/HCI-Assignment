@@ -25,7 +25,7 @@ namespace HCI_Assignment_New.Pages {
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e) {
             DialogBox.Show("Hey", "You are hacker", "OK", "LOL");
-            if (DialogBox.DialogResult == DialogBox.Result.LeftButtonClicked) {
+            if (DialogBox.Result == DialogBox.ResultEnum.LeftButtonClicked) {
                 MessageBox.Show("left button clicked");
             }
             else {

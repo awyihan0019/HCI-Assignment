@@ -17,23 +17,23 @@ namespace HCI_Assignment_New.Global {
     /// Interaction logic for DialogBoxx.xaml
     /// </summary>
     public partial class DialogBox : Window {
-        public enum Result {
+        public enum ResultEnum {
             LeftButtonClicked,
             RightButtonClicked
         }
 
-        private Result _result;
+        private ResultEnum _result;
         public DialogBox() {
             InitializeComponent();
         }
 
-        public new static Result DialogResult;
-        public static Result Show(string title, string message, string leftButtonText, string rightButtonText=null) {
+        public new static ResultEnum Result;
+        public static ResultEnum Show(string title, string message, string leftButtonText, string rightButtonText=null) {
             var p = new DialogBox();
             p.SetContent(title, message, leftButtonText, rightButtonText);
             p.DialogHost.IsOpen = true;
             p.ShowDialog();
-            DialogResult = p._result;
+            Result = p._result;
             return p._result;
         }
         private void SetContent(string title , string message , string leftButtonText , string rightButtonText) {
@@ -45,22 +45,22 @@ namespace HCI_Assignment_New.Global {
         }
 
         private void Button_Left_OnClick(object sender, RoutedEventArgs e) {
-            _result = Result.LeftButtonClicked;
+            _result = ResultEnum.LeftButtonClicked;
             this.Hide();
         }
 
         private void Button_Right_OnClick(object sender, RoutedEventArgs e) {
-            _result = Result.RightButtonClicked;
+            _result = ResultEnum.RightButtonClicked;
             this.Hide();
         }
 
         private void SampleCode() {
-            var result = DialogBox.Show("Title" , "message" , "OK" , "Cancel");
-            switch (result) {
-                case DialogBox.Result.LeftButtonClicked:
+            DialogBox.Show("Title" , "message" , "OK" , "Cancel");
+            switch (DialogBox.Result) {
+                case DialogBox.ResultEnum.LeftButtonClicked:
                     MessageBox.Show("You clicked left button");
                     break;
-                case DialogBox.Result.RightButtonClicked:
+                case DialogBox.ResultEnum.RightButtonClicked:
                     MessageBox.Show("you clicked right button");
                     break;
 
