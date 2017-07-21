@@ -20,5 +20,13 @@ namespace HCI_Assignment_New.Global {
         public DialogBoxx() {
             InitializeComponent();
         }
+
+        private void Button_Left_OnClick(object sender, RoutedEventArgs e) {
+            throw new NotImplementedException();
+        }
+
+        private void Button_Right_OnClick(object sender, RoutedEventArgs e) {
+            throw new NotImplementedException();
+        }
     }
 }
