@@ -27,7 +27,8 @@ namespace HCI_Assignment_New.Global {
             InitializeComponent();
         }
 
-        public new static ResultEnum Result;
+        public static ResultEnum Result;
+
         public static ResultEnum Show(string title, string message, string leftButtonText, string rightButtonText=null) {
             var p = new DialogBox();
             p.SetContent(title, message, leftButtonText, rightButtonText);
