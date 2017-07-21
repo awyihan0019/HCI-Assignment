@@ -27,12 +27,13 @@ namespace HCI_Assignment_New.Global {
             InitializeComponent();
         }
 
+        public new static Result DialogResult;
         public static Result Show(string title, string message, string leftButtonText, string rightButtonText=null) {
             var p = new DialogBox();
             p.SetContent(title, message, leftButtonText, rightButtonText);
             p.DialogHost.IsOpen = true;
             p.ShowDialog();
-     
+            DialogResult = p._result;
             return p._result;
         }
         private void SetContent(string title , string message , string leftButtonText , string rightButtonText) {
