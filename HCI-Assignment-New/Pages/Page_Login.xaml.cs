@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using HCI_Assignment_New.Global;
 
 namespace HCI_Assignment_New.Pages {
     /// <summary>
@@ -22,7 +23,8 @@ namespace HCI_Assignment_New.Pages {
             InitializeComponent();
         }
 
-        private void ButtonBase_OnClick(object sender, RoutedEventArgs e) {            
+        private void ButtonBase_OnClick(object sender, RoutedEventArgs e) {
+            DialogBox.Show("Hey", "You are hacker", "OK");
         }
     }
 }

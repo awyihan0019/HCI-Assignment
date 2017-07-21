@@ -60,22 +60,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Control\DialogBox.xaml.cs">
+    <Compile Include="Global\DialogBox.xaml.cs">
       <DependentUpon>DialogBox.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Global\DialogBoxx.xaml.cs">
-      <DependentUpon>DialogBoxx.xaml</DependentUpon>
     </Compile>
     <Compile Include="Interface\IPageWithLoadedFunction.cs" />
     <Compile Include="Pages\Page_Login.xaml.cs">
       <DependentUpon>Page_Login.xaml</DependentUpon>
     </Compile>
     <Compile Include="StaticClass\CustomAnimation.cs" />
-    <Page Include="Control\DialogBox.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Global\DialogBoxx.xaml">
+    <Page Include="Global\DialogBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
